@@ -1,0 +1,25 @@
+{{template "header"}}
+  <title>我的博客 - 文章列表</title>
+</head>
+<body>
+
+	{{template "navbar" .}}
+	
+	<a href="#"><h1>文章列表</h1></a>
+	<a href="/topic/add"><h1>添加文章</h1></a>
+
+	<div class="container">
+		{{range .Topics}}
+		<div class="page-header">
+			<h1>{{.Title}}</h1>
+			<h6 class="text-muted">文章发表于 {{.Created}}，共有 {{.Views}} 次浏览，{{.ReplyCount}}个评论</h6>
+			<p>
+				{{.Content}}
+			</p>
+		</div>
+		{{end}}
+	</div>
+
+
+</body>
+</html> 

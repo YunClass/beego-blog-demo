@@ -1,0 +1,20 @@
+{{template "header"}}
+  <title>我的博客 - {{.Topic.Title}}</title>
+</head>
+<body>
+
+	{{template "navbar" .}}
+
+	<div class="container">
+		<div class="page-header">
+			<h1>{{.Topic.Title}}</h1><a href="/topic/modify/{{.Topic.Id}}">修改文章</a>
+			<h6 class="text-muted">
+			文章发表于 {{.Topic.Created}}，共有 {{.Topic.Views}} 次浏览，{{.Topic.ReplyCount}}个评论</h6>
+			<p>
+				{{.Topic.Content}}
+			</p>
+		</div>
+	</div>
+
+</body>
+</html> 
